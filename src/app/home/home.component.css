@@ -3,3 +3,10 @@
     background: red;
     text-align: center;
 }
+.members-view {
+    display : flex;
+}
+
+.members-view > div {
+    width: 33%;
+}

@@ -18,7 +18,7 @@ const appRoutes: Routes = [
         { path: 'haber', component: HaberComponent },
         { path: 'duyuru', component: DuyurularComponent,
         children: [
-            { path: '', redirectTo: 'duyuru', pathMatch: 'full' },
+            { path: '', redirectTo: 'contactus', pathMatch: 'full' },
             { path: 'haber', component: HaberComponent },
             { path: 'duyuru', component: DuyurularComponent },
             { path: 'home', component: HomeComponent}

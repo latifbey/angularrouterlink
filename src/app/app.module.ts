@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRouteModule } from './app.route';
 import { MainComponent } from './main/main.component';
@@ -12,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { HaberComponent } from './haber/haber.component';
 import { DuyurularComponent } from './duyurular/duyurular.component';
+import { PersonService } from './services/person.service';
 
 
 @NgModule({
@@ -29,9 +31,10 @@ import { DuyurularComponent } from './duyurular/duyurular.component';
   imports: [
     BrowserModule,
     RouterModule,
-    AppRouteModule
+    AppRouteModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PersonService],
   bootstrap: [MainComponent]
 })
 export class AppModule { }

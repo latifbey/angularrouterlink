@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonService } from '../services/person.service';
+
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  uyeler: any[];
+  kisi: any;
+  gorev: any[];
+
+
+  constructor(private personservice: PersonService) { }
 
   ngOnInit() {
+    this.uyeleriGetir();
   }
 
+  uyeleriGetir() {
+    this.personservice.hepsiniBul().subscribe(result => {
+      console.log(result);
+      this.uyeler = result.data;
+      this.uyeDetayGetir(this.uyeler[0].persnr);
+
+    });
+  }
+
+  uyeDetayGetir(persnr) {
+    this.personservice.biriniBul(persnr).subscribe(result => {
+      console.log(result.data);
+      this.kisi = result.data.personal[0];
+      this.gorev = result.data.job;
+    })
+  }
 }

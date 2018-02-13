@@ -1,6 +1,26 @@
 <div class="home">
   <h1>
-  anasayfamiza hosgeldiniz
-</h1>
-<h3>burada sizinle guncel haberleri paylasacagiz</h3>
+    Anasayfamiza hosgeldiniz
+  </h1>
+  <h3>burada sizinle guncel haberleri paylasacagiz</h3>
+  <div class="members-view">
+    <div>
+      <div *ngFor="let uye of uyeler" (click)="uyeDetayGetir(uye.persnr)">
+        <p> {{uye.name}}</p>
+      </div>
+    </div>
+    <div *ngIf="kisi">
+      <p> abteilung name : {{kisi.abtName}} </p>
+      <p> abteilung number : {{kisi.abtnr}} </p>
+      <p> abteilung bonus : {{kisi.bonus}} </p>
+      <p> eintritsdatum : {{kisi.eintrittsdatum | date:'short'}} </p>
+      <p> person name : {{kisi.name}} </p>
+      <p> person number : {{kisi.persnr}} </p>
+      <p> person salaer: {{kisi.salaer}} </p>
+      <p> wohnort : {{kisi.wohnort}} </p>
+    </div>
+    <div *ngIf="gorev && gorev.length">
+      <p *ngFor="let gore of gorev"> project name : {{gorev.bezeichnung}} </p>
+    </div>
+  </div>
 </div>
