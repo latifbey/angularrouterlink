@@ -7,6 +7,11 @@ import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
+import { HaberComponent } from './haber/haber.component';
+import { DuyurularComponent } from './duyurular/duyurular.component';
 
 
 @NgModule({
@@ -14,7 +19,12 @@ import { ContentComponent } from './content/content.component';
     MainComponent,
     HeaderComponent,
     FooterComponent,
-    ContentComponent
+    ContentComponent,
+    AboutComponent,
+    ContactComponent,
+    HomeComponent,
+    HaberComponent,
+    DuyurularComponent
   ],
   imports: [
     BrowserModule,

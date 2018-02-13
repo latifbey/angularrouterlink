@@ -1,7 +1,10 @@
 <div class="CENTER">
+    <a [routerLink]="['haber']" routerLinkActive="active"> HABERLER</a>
+    <a [routerLink]="['duyuru']" routerLinkActive="active"> DUYURULAR</a>
   <h1>
-    Ana Sayfamiza HOSGELDINIZ
+    Content Sayfamiza HOSGELDINIZ
   </h1>
+  <router-outlet></router-outlet>
   <div>
     iceriklerinizi content kismimizda gosteriyoruz. angular spa ozelligi nedeniyle sadece content kismi degisecek header ve footer
     aynen kalacaktir.
@@ -10,5 +13,6 @@
     </h3>
   </div>
 </div>
+
 
 

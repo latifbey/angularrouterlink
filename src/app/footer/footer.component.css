@@ -2,5 +2,7 @@
     background: blue;
     text-align: right;
     color: white;
+    position: fixed;
+    bottom: 0;
 
 }
